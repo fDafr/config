@@ -10,11 +10,11 @@ hi StatusLine gui=reverse cterm=reverse
 set autoread
 set backup
 set browsedir=current
-set clipboard=unnamedplus
+set clipboard=unnamedplus 
 set encoding=utf-8
 set hidden
 set history=128
-set mouse=a
+set mouse=  "//with this dont paste by press right mouse
 set nocompatible
 set noswapfile
 set sessionoptions=curdir,buffers,tabpages
@@ -54,8 +54,8 @@ syntax enable
 "===========================================================================
 "=============================== COLORSCHEME ===============================
 "===========================================================================
-if empty(glob('/usr/share/vim/vim82/colors/sublimemonokai.vim'))
-silent !curl -fLo /usr/share/vim/vim82/colors/sublimemonokai.vim --create-dirs
+if empty(glob('~/.vim/colors/sublimemonokai.vim'))
+silent !curl -fLo ~/.vim/colors/sublimemonokai.vim --create-dirs
 \ https://raw.githubusercontent.com/ErichDonGubler/vim-sublime-monokai/master/colors/sublimemonokai.vim
 endif
 set background=dark
@@ -128,13 +128,13 @@ vnoremap # :call VisualSearch()?/
 "===========================================================================
 "=============================== PLUGINS ===================================
 "===========================================================================
-if empty(glob('/usr/share/vim/vim82/autoload/plug.vim'))
-silent !curl -fLo /usr/share/vim/vim82/autoload/plug.vim --create-dirs
+if empty(glob('~/.vim/autoload/plug.vim'))
+silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('/usr/share/vim/vim82/bundle')
+call plug#begin('~/.vim/bundle')
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""" Code/Project Navigation """"""""""
